@@ -6,12 +6,6 @@ const canvas = document.getElementById("pong");
 
 const ctx = canvas.getContext('2d');
 
-// load sounds
-
-
-
-
-
 
 
 
@@ -203,7 +197,7 @@ function update(){
 
     if( ball.x - ball.radius < 0 ){
 
-        com.score++;
+        this.com.score++;
 
 
         resetBall();
@@ -231,9 +225,8 @@ function update(){
 
     // simple AI
 
-    com.y += ((ball.y - (com.y + com.height/2)))*0.1;
+    this.com.y += ((ball.y - (this.com.y + this.com.height/2)))*0.1;
 
-  
 
     // when the ball collides with bottom and top walls we inverse the y velocity.
 
@@ -248,7 +241,7 @@ function update(){
 
     // we check if the paddle hit the user or the com paddle
 
-    let player = (ball.x + ball.radius < canvas.width/2) ? user : com;
+    let player = (ball.x + ball.radius < canvas.width/2) ? user : this.com;
 
   
 
@@ -321,7 +314,7 @@ function render(){
 
     // draw the COM score to the right
 
-    drawText(com.score,3*canvas.width/4,canvas.height/5);
+    drawText(this.com.score,3*canvas.width/4,canvas.height/5);
 
   
 
@@ -339,7 +332,7 @@ function render(){
 
     // draw the COM's paddle
 
-    drawRect(com.x, com.y, com.width, com.height, com.color);
+    drawRect(this.com.x, this.com.y, this.com.width, this.com.height, this.com.color);
 
   
 
