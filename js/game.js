@@ -8,21 +8,12 @@ const ctx = canvas.getContext('2d');
 
 // load sounds
 
-let hit = new Audio();
 
-let wall = new Audio();
 
-let userScore = new Audio();
 
-let comScore = new Audio();
 
-hit.src = "sounds/hit.mp3";
 
-wall.src = "sounds/RachYO.mp3";
 
-comScore.src = "sounds/RachYO.mp3";
-
-userScore.src = "sounds/RachYO.mp3";
 
 // Ball object
 
@@ -214,7 +205,6 @@ function update(){
 
         com.score++;
 
-        comScore.play();
 
         resetBall();
 
@@ -222,7 +212,6 @@ function update(){
 
         user.score++;
 
-        userScore.play();
 
         resetBall();
 
@@ -252,7 +241,6 @@ function update(){
 
         ball.velocityY = -ball.velocityY;
 
-        wall.play();
 
     }
 
@@ -270,7 +258,6 @@ function update(){
 
         // play sound
 
-        hit.play();
 
         // we check where the ball hits the paddle
 
