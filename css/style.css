@@ -229,7 +229,6 @@ section.work .project-wrapper .card:hover h2, section.work .project-wrapper .car
   transition: 1s;
 }
 }
-}
 @media (max-width: 502px) {
   .home .home-content .text {
     margin-top: 100px;
@@ -254,7 +253,6 @@ section.work .project-wrapper .card:hover h2, section.work .project-wrapper .car
     margin-right: 90px;
     color: #fff;
   }
-}
 @media (max-width: 991px) {
   .max-width {
     padding: 0 90px;
