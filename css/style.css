@@ -92,7 +92,7 @@ section{
 .about .about-content{
   display:flex;
   align-items:CENTER;
-  justify-contewnt:space-between;
+  justify-content:space-between;
   flex-wrap:Wrap;
 }
 .about .about-content .left{
